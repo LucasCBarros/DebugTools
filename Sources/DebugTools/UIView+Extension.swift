@@ -24,6 +24,7 @@ extension UIView {
                               contrast: Int,
                               debugColor: DebugColor,
                               in subview: UIView) {
+        self.backgroundColor = .systemYellow
         
         for subView in self.subviews {
             let maxLevel = CGFloat(subLevels)
