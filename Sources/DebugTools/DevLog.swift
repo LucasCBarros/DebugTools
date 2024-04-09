@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DevLog {
+public enum DevLog {
     enum LogLevel {
         case info
         case warning

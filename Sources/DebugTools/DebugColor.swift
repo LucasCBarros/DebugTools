@@ -7,10 +7,10 @@
 
 import UIKit
 
-enum DebugColor {
+public enum DebugColor {
     case redScale, blueScale, greenScale, grayScale, pinkScale, yellowScale, cyanScale
     
-    func color(_ levelFraction: CGFloat) -> UIColor {
+    public func color(_ levelFraction: CGFloat) -> UIColor {
         let step = (levelFraction) * 255.0
         
         switch self {
