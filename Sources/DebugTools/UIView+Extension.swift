@@ -8,7 +8,7 @@ import UIKit
 
 extension UIView {
     
-    func debugMode(subLevels: Int = 5,
+    public func debugMode(subLevels: Int = 5,
                    contrast: Int = 1,
                    debugColor: DebugColor = .redScale) {
         

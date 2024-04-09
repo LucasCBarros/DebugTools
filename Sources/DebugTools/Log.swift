@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DevLog {
+public enum Log {
     enum LogLevel {
         case info
         case warning
@@ -33,21 +33,21 @@ public enum DevLog {
     }
     
     // #file is Literal Expression: Swift will substitute in runtime
-    static func info(_ str: String, shouldLogContext: Bool = true, file: String = #file, function: String = #function, line: Int = #line) {
+    static public func info(_ str: String, shouldLogContext: Bool = true, file: String = #file, function: String = #function, line: Int = #line) {
         let context = Context(file: file, function: function, line: line)
-        DevLog.handleLog(level: .info, str: str.description, shouldLogContext: shouldLogContext, context: context)
+        Log.handleLog(level: .info, str: str.description, shouldLogContext: shouldLogContext, context: context)
         
     }
     
-    static func warning(_ str: String, shouldLogContext: Bool = true, file: String = #file, function: String = #function, line: Int = #line) {
+    static public func warning(_ str: String, shouldLogContext: Bool = true, file: String = #file, function: String = #function, line: Int = #line) {
         let context = Context(file: file, function: function, line: line)
-        DevLog.handleLog(level: .warning, str: str.description, shouldLogContext: shouldLogContext, context: context)
+        Log.handleLog(level: .warning, str: str.description, shouldLogContext: shouldLogContext, context: context)
         
     }
     
-    static func error(_ str: String, shouldLogContext: Bool = true, file: String = #file, function: String = #function, line: Int = #line) {
+    static public func error(_ str: String, shouldLogContext: Bool = true, file: String = #file, function: String = #function, line: Int = #line) {
         let context = Context(file: file, function: function, line: line)
-        DevLog.handleLog(level: .error, str: str.description, shouldLogContext: shouldLogContext, context: context)
+        Log.handleLog(level: .error, str: str.description, shouldLogContext: shouldLogContext, context: context)
         
     }
     
